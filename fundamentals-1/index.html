@@ -11,13 +11,17 @@
     <p>{{fullName()}}</p>
     <p><a :href="url" target="_blank">Google</a></p>
     <p v-html="raw_url"></p>
+    <p>{{age}}</p>
     <hr />
 
     <label>First Name</label>
     <input v-model="firstName" type="text" />
 
     <label>Last Name</label>
-    <input v-model="lastName" type="text" />
+    <input :value="lastName" @input="updateLastName" type="text" />
+
+    <button type="button" @click="increment">Increment</button>
+    <button type="button" @click="age--">Decrement</button>
   </div>
 
   <!-- <div id="app2">
