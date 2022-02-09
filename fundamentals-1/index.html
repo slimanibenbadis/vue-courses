@@ -17,6 +17,9 @@
     <label>First Name</label>
     <input v-model="firstName" type="text" />
 
+    <label>Middle Name</label>
+    <input type="text" @keyup.enter="updateMiddleName" />
+
     <label>Last Name</label>
     <input :value="lastName" @input.prevent="updateLastName('Last Name updated!', $event)" type="text" />
 
